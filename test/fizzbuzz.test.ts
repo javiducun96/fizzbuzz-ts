@@ -1,13 +1,9 @@
 import { fizzBuzz } from "../src/fizzbuzz"
 
 describe("FizzBuzz", () => {
-  it("fizz buzz must return 1 with 1", () => {
+  it("fizz buzz must return number in these cases", () => {
     expect(fizzBuzz(1)).toEqual("1")
-  })
-  it("fizz buzz must return 2 with 2", () => {
     expect(fizzBuzz(2)).toEqual("2")
-  })
-  it("fizz buzz must return 4 with 4", () => {
     expect(fizzBuzz(4)).toEqual("4")
   })
   it("fizz buzz must return Fizz with 3", () => {
