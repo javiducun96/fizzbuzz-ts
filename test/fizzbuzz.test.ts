@@ -5,7 +5,11 @@ describe("FizzBuzz", () => {
     expect(fizzBuzz(3)).toEqual("Fizz")
   })
 
-  it("fizz buzz must 10 Buzz with 10", () => {
+  it("fizz buzz must return Buzz with 10", () => {
     expect(fizzBuzz(10)).toEqual("Buzz")
+  })
+
+  it("fizz buzz must return 1 with 1", () => {
+    expect(fizzBuzz(1)).toEqual("1")
   })
 })
