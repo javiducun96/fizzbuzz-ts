@@ -1,6 +1,12 @@
+const containsOrIsMultipleOf = (input: number, clause: number) => {
+  const isMultiple = input % clause === 0
+  const containsNum = input.toString().includes(clause.toString())
+  return isMultiple || containsNum
+}
+
 export const fizzBuzz = (num: number): string => {
-  const isFizz = num % 3 === 0 || num.toString().includes("3")
-  const isBuzz = num % 5 === 0 || num.toString().includes("5")
+  const isFizz = containsOrIsMultipleOf(num, 3)
+  const isBuzz = containsOrIsMultipleOf(num, 5)
   if (isFizz && isBuzz) return "FizzBuzz"
   if (isFizz) return "Fizz"
   if (isBuzz) return "Buzz"
