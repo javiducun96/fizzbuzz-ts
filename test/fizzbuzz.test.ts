@@ -26,4 +26,8 @@ describe("FizzBuzz", () => {
   it("fizz buzz must return Buzz with 15", () => {
     expect(fizzBuzz(15)).toEqual("FizzBuzz")
   })
+
+  it("fizz buzz must return Buzz with 20", () => {
+    expect(fizzBuzz(20)).toEqual("Buzz")
+  })
 })
