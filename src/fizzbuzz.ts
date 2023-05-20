@@ -1,13 +1,12 @@
 export const fizzBuzz = (input: number): string => {
-  if (isFizz(input) && isBuzz(input)) return "FizzBuzz"
-  if (isFizz(input)) return "Fizz"
-  if (isBuzz(input)) return "Buzz"
+  const isFizz = containsOrIsMultipleOf(input, 3)
+  const isBuzz = containsOrIsMultipleOf(input, 5)
+  if (isFizz && isBuzz) return "FizzBuzz"
+  if (isFizz) return "Fizz"
+  if (isBuzz) return "Buzz"
 
   return input.toString()
 }
-
-const isFizz = (input: number) => containsOrIsMultipleOf(input, 3)
-const isBuzz = (input: number) => containsOrIsMultipleOf(input, 5)
 
 const containsOrIsMultipleOf = (input: number, clause: number) => {
   return isMultiple(input, clause) || containsNumber(input, clause)
