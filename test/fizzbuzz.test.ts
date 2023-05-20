@@ -21,7 +21,9 @@ describe("FizzBuzz", () => {
     expect(fizzBuzz(20)).toEqual("Buzz")
   })
 
-  it("fizz buzz must return FizzBuzz with 15", () => {
+  it("fizz buzz must return FizzBuzz when number is divisible by 3 and 5", () => {
     expect(fizzBuzz(15)).toEqual("FizzBuzz")
+    expect(fizzBuzz(30)).toEqual("FizzBuzz")
+    expect(fizzBuzz(45)).toEqual("FizzBuzz")
   })
 })
