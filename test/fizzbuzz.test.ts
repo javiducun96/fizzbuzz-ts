@@ -14,6 +14,10 @@ describe("FizzBuzz", () => {
     expect(fizzBuzz(5)).toEqual("Buzz")
   })
 
+  it("fizz buzz must return Buzz with 6", () => {
+    expect(fizzBuzz(6)).toEqual("Fizz")
+  })
+
   it("fizz buzz must return Buzz with 10", () => {
     expect(fizzBuzz(10)).toEqual("Buzz")
   })
