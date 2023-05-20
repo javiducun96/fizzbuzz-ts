@@ -1,14 +1,18 @@
-const containsOrIsMultipleOf = (input: number, clause: number) => {
-  const isMultiple = input % clause === 0
-  const containsNum = input.toString().includes(clause.toString())
-  return isMultiple || containsNum
+export const fizzBuzz = (input: number): string => {
+  if (isFizz(input) && isBuzz(input)) return "FizzBuzz"
+  if (isFizz(input)) return "Fizz"
+  if (isBuzz(input)) return "Buzz"
+
+  return input.toString()
 }
 
-export const fizzBuzz = (num: number): string => {
-  const isFizz = containsOrIsMultipleOf(num, 3)
-  const isBuzz = containsOrIsMultipleOf(num, 5)
-  if (isFizz && isBuzz) return "FizzBuzz"
-  if (isFizz) return "Fizz"
-  if (isBuzz) return "Buzz"
-  return num.toString()
+const isFizz = (input: number) => containsOrIsMultipleOf(input, 3)
+const isBuzz = (input: number) => containsOrIsMultipleOf(input, 5)
+
+const containsOrIsMultipleOf = (input: number, clause: number) => {
+  return isMultiple(input, clause) || containsNumber(input, clause)
 }
+
+const isMultiple = (input: number, clause: number) => input % clause === 0
+const containsNumber = (input: number, clause: number) =>
+  input.toString().includes(clause.toString())
