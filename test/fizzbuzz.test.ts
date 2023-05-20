@@ -1,7 +1,7 @@
-import { fizzBuzz } from '../src/fizzbuzz'
+import { fizzBuzz } from "../src/fizzbuzz"
 
-describe('FizzBuzz', () => {
-    it('example test', () => {
-        expect(fizzBuzz()).toEqual(undefined)
-    })
+describe("FizzBuzz", () => {
+  it("fizz buzz must return Fizz with 3", () => {
+    expect(fizzBuzz(3)).toEqual("Fizz")
+  })
 })
