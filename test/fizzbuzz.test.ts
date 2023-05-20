@@ -9,19 +9,19 @@ describe("FizzBuzz", () => {
     expect(fizzBuzz(8)).toEqual("8")
   })
 
-  it("fizz buzz must return number when number is divisible by 3", () => {
+  it("fizz buzz must return Fizz when number is divisible by 3", () => {
     expect(fizzBuzz(3)).toEqual("Fizz")
     expect(fizzBuzz(6)).toEqual("Fizz")
     expect(fizzBuzz(9)).toEqual("Fizz")
   })
 
-  it("fizz buzz must return number when number is divisible by 5", () => {
+  it("fizz buzz must return Buzz when number is divisible by 5", () => {
     expect(fizzBuzz(5)).toEqual("Buzz")
     expect(fizzBuzz(10)).toEqual("Buzz")
     expect(fizzBuzz(20)).toEqual("Buzz")
   })
 
-  it("fizz buzz must return Buzz with 15", () => {
+  it("fizz buzz must return FizzBuzz with 15", () => {
     expect(fizzBuzz(15)).toEqual("FizzBuzz")
   })
 })
