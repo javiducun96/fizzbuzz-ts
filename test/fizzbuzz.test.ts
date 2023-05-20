@@ -1,7 +1,7 @@
 import { fizzBuzz } from "../src/fizzbuzz"
 
 describe("FizzBuzz", () => {
-  it("fizz buzz must return number in these cases", () => {
+  it("fizz buzz must return number when is not divisible by three and five", () => {
     expect(fizzBuzz(1)).toEqual("1")
     expect(fizzBuzz(2)).toEqual("2")
     expect(fizzBuzz(4)).toEqual("4")
@@ -9,19 +9,19 @@ describe("FizzBuzz", () => {
     expect(fizzBuzz(8)).toEqual("8")
   })
 
-  it("fizz buzz must return Fizz when number is divisible by 3", () => {
+  it("fizz buzz must return Fizz when number is divisible by three", () => {
     expect(fizzBuzz(3)).toEqual("Fizz")
     expect(fizzBuzz(6)).toEqual("Fizz")
     expect(fizzBuzz(9)).toEqual("Fizz")
   })
 
-  it("fizz buzz must return Buzz when number is divisible by 5", () => {
+  it("fizz buzz must return Buzz when number is divisible by five", () => {
     expect(fizzBuzz(5)).toEqual("Buzz")
     expect(fizzBuzz(10)).toEqual("Buzz")
     expect(fizzBuzz(20)).toEqual("Buzz")
   })
 
-  it("fizz buzz must return FizzBuzz when number is divisible by 3 and 5", () => {
+  it("fizz buzz must return FizzBuzz when number is divisible by three and five", () => {
     expect(fizzBuzz(15)).toEqual("FizzBuzz")
     expect(fizzBuzz(30)).toEqual("FizzBuzz")
     expect(fizzBuzz(45)).toEqual("FizzBuzz")
