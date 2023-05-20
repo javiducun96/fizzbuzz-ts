@@ -1,3 +1,4 @@
 export const fizzBuzz = (num: number) => {
-  return "Fizz"
+  if (num === 3) return "Fizz"
+  return "Buzz"
 }
